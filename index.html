@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>FAQ – CashView</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Moneytizer CMP (cookies) -->
+<script async src="https://ads.themoneytizer.com/js/cmp.js"></script>
+
+<style>
+body{
+  margin:0;
+  background:#f2f2f2;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+  max-width:480px;
+  margin:0 auto;
+  padding:10px;
+}
+.indicator{
+  text-align:center;
+  font-size:13px;
+  color:#555;
+  margin-bottom:6px;
+}
+.progress{
+  height:6px;
+  background:#ddd;
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+.progress-bar{
+  height:100%;
+  width:33%;
+  background:#6a1bb1;
+  transition:width .3s;
+}
+.card{
+  display:none;
+  background:#fff;
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+  max-height:75vh;
+  overflow-y:auto;
+}
+.card.active{display:block;}
+h2{color:#6a1bb1;margin-top:0;}
+h3{margin-bottom:6px;}
+ul{padding-left:18px;margin-top:6px;}
+.alert{
+  background:#f3ecfb;
+  border-left:4px solid #6a1bb1;
+  padding:10px;
+  margin-top:12px;
+  font-size:13px;
+}
+.timer{
+  margin-top:10px;
+  font-size:13px;
+  color:#555;
+  text-align:center;
+}
+.actions{
+  display:flex;
+  gap:8px;
+  margin-top:14px;
+}
+button{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  font-weight:bold;
+  font-size:14px;
+}
+button.locked{background:#aaa;color:#fff;}
+button.primary{background:#6a1bb1;color:#fff;}
+button.success{background:#2e7d32;color:#fff;}
+.ad-banner{
+  margin:14px auto 24px auto;
+  min-height:90px;
+  width:100%;
+  background:#eaeaea;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  color:#666;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="indicator" id="indicator">Card 1 / 3</div>
+<div class="progress"><div class="progress-bar" id="progress"></div></div>
+
+<!-- CARD 1 -->
+<div class="card active" id="card1">
+<h2>CashView – O que é?</h2>
+<p>
+O <strong>CashView</strong> é uma plataforma de microtarefas onde usuários ganham
+<strong>Catcoins (CAT)</strong> ao executar tarefas em links monetizados e ao indicar novos usuários.
+</p>
+
+<h3>Catcoins (CAT)</h3>
+<ul>
+<li>Moeda interna do CashView</li>
+<li>1 CAT = US$0,01</li>
+<li>Saldo exibido sempre em Catcoins</li>
+<li>Usado para saques ou planos VIP/Premium</li>
+</ul>
+
+<div class="timer" id="timer1">Aguarde <strong>9s</strong> para continuar</div>
+
+<div class="actions">
+<button class="locked" id="btn1">Continuar</button>
+</div>
+</div>
+
+<div class="ad-banner">Banner CPM – Moneytizer</div>
+
+<!-- CARD 2 -->
+<div class="card" id="card2">
+<h2>Modalidade 1 – Tarefas Unitárias</h2>
+<ul>
+<li>Execução individual de links monetizados</li>
+<li><strong>Free:</strong> até 100 links por dia</li>
+<li><strong>Premium:</strong> até 200 links por dia</li>
+<li>Cada link pode ser feito apenas uma vez por usuário</li>
+<li>Base renovada a cada 24h</li>
+</ul>
+
+<h2>Modalidade 2 – Packs de Links</h2>
+<ul>
+<li>Cada tarefa = <strong>1 pack com 4 links</strong></li>
+<li>5 packs disponíveis por dia</li>
+<li>Renovação a cada 24h</li>
+<li>Mesmas regras de validação da Modalidade 1</li>
+</ul>
+
+<div class="alert">
+A tarefa só é válida após concluir todos os links do pack até o destino final.
+</div>
+
+<div class="timer" id="timer2">Aguarde <strong>7s</strong> para avançar</div>
+
+<div class="actions">
+<button class="locked" id="btn2">Avançar ▶</button>
+</div>
+</div>
+
+<div class="ad-banner">Banner CPM – Moneytizer</div>
+
+<!-- CARD 3 -->
+<div class="card" id="card3">
+<h2>Modalidade 3 – Indicação & Parceria Longa</h2>
+<ul>
+<li>Link exclusivo de cadastro</li>
+<li>Pagamento por cadastro confirmado por e-mail</li>
+<li>50% após confirmação</li>
+<li>50% após 1 tarefa da Modalidade 1</li>
+<li>1 crédito por usuário a cada 24h</li>
+</ul>
+
+<h3>Bônus YouTube</h3>
+<ul>
+<li>Até 100 cliques bônus</li>
+<li>10% do valor base da Modalidade 1</li>
+<li>Usuários válidos e sem VPN</li>
+</ul>
+
+<h2>Planos VIP e Premium</h2>
+<ul>
+<li>VIP: remove anúncios</li>
+<li>Premium: remove anúncios + offerwall</li>
+<li>Ativação usando Catcoins acumulados</li>
+<li>CAT usado em planos é queimado</li>
+</ul>
+
+<h2>Saques e Regras</h2>
+<ul>
+<li>Saque mínimo: US$2</li>
+<li>Pagamentos via FaucetPay</li>
+<li>VPN, bots ou automação resultam em bloqueio</li>
+<li>Contas inativas por 30 dias são liquidadas</li>
+</ul>
+
+<div class="actions">
+<button class="success">Tarefa concluída ✅</button>
+</div>
+</div>
+
+<div class="ad-banner">Banner CPM – Moneytizer</div>
+
+</div>
+
+<script>
+const indicator = document.getElementById("indicator");
+const progress = document.getElementById("progress");
+
+let s1 = 9;
+const t1 = document.getElementById("timer1");
+const b1 = document.getElementById("btn1");
+
+const c1 = setInterval(()=>{
+  s1--;
+  t1.innerHTML = `Aguarde <strong>${s1}s</strong> para continuar`;
+  if(s1<=0){
+    clearInterval(c1);
+    t1.innerHTML = "Tempo concluído";
+    b1.className="primary";
+    b1.onclick=()=>nextCard(1);
+  }
+},1000);
+
+function startCard2Timer(){
+  let s2 = 7;
+  const t2 = document.getElementById("timer2");
+  const b2 = document.getElementById("btn2");
+  const c2 = setInterval(()=>{
+    s2--;
+    t2.innerHTML = `Aguarde <strong>${s2}s</strong> para avançar`;
+    if(s2<=0){
+      clearInterval(c2);
+      t2.innerHTML = "Tempo concluído";
+      b2.className="primary";
+      b2.onclick=()=>nextCard(2);
+    }
+  },1000);
+}
+
+function nextCard(n){
+  document.getElementById("card"+n).classList.remove("active");
+  document.getElementById("card"+(n+1)).classList.add("active");
+  indicator.innerText = `Card ${n+1} / 3`;
+  progress.style.width = `${((n+1)/3)*100}%`;
+  window.scrollTo({top:0,behavior:"smooth"});
+  if(n===1) startCard2Timer();
+}
+</script>
+
+</body>
+</html>
